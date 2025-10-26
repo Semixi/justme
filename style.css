@@ -201,11 +201,6 @@
   .footer-social-links {
     gap: 2rem;
   }
-  .footer-social-links a {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
   
   /* =============================================================================
      PROJECT CARDS (Focus Areas)
@@ -365,14 +360,14 @@
     color: var(--main-red);
   }
   
-  /* Skills Modal Cards */
-  .skills-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Skills Modal - Vertical List */
+  .skills-list-container {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 1.5rem;
   }
-  .skill-card {
+  .skill-item {
     background: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
@@ -382,7 +377,7 @@
     line-height: 1.5;
     color: #ccc;
   }
-  .skill-card:hover {
+  .skill-item:hover {
     background: #222;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -396,26 +391,28 @@
     color: var(--main-red);
     font-size: 1rem;
   }
-  .skill-header i { font-size: 1.1rem; }
+  .skill-header i {
+    font-size: 1.1rem;
+  }
   
-  /* Hobbies Modal Cards */
-  .hobby-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* Hobbies Modal - Vertical List */
+  .hobby-list-container {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 1.5rem;
   }
-  .hobby-card {
+  .hobby-item {
     background: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 0.95rem;
     line-height: 1.5;
     color: #ccc;
   }
-  .hobby-card:hover {
+  .hobby-item:hover {
     background: #222;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -429,8 +426,12 @@
     color: var(--main-red);
     font-size: 1rem;
   }
-  .hobby-header i { font-size: 1.1rem; }
-  .hobby-card p { margin: 0; }
+  .hobby-header i {
+    font-size: 1.1rem;
+  }
+  .hobby-item p {
+    margin: 0;
+  }
   
   /* Thoughts Cards */
   .personal-card-grid {
@@ -490,10 +491,11 @@
      UI CONTROLS
      ========================================================================== */
   
-  .theme-toggle {
+  /* Theme Toggle - Bottom-Left */
+  .theme-toggle-bottom-left {
     position: fixed;
-    top: 1.2rem;
-    right: 1.2rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
     z-index: 999;
   }
   #themeToggle {
@@ -520,6 +522,8 @@
   #themeToggle.dark-mode i {
     color: #000;
   }
+  
+  /* Back to Top Button */
   #backToTop {
     position: fixed;
     bottom: 1.5rem;
@@ -556,8 +560,8 @@
   body.light-mode .skills-card,
   body.light-mode .personal-card,
   body.light-mode #hobbies-card,
-  body.light-mode .hobby-card,
-  body.light-mode .skill-card {
+  body.light-mode .hobby-item,
+  body.light-mode .skill-item {
     background: #f9f9f9;
     border-color: #ddd;
     color: #333;
@@ -571,15 +575,15 @@
   }
   body.light-mode .project-card p,
   body.light-mode .personal-card p,
-  body.light-mode .hobby-card p,
+  body.light-mode .hobby-item p,
   body.light-mode .skills-card li,
-  body.light-mode .skill-card li {
+  body.light-mode .skill-item li {
     color: #555;
   }
   body.light-mode .project-card:hover,
   body.light-mode .personal-card:hover,
-  body.light-mode .hobby-card:hover,
-  body.light-mode .skill-card:hover {
+  body.light-mode .hobby-item:hover,
+  body.light-mode .skill-item:hover {
     background: #f0f0f0;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
@@ -613,8 +617,8 @@
     .social-icon-button { width: 48px; height: 48px; font-size: 1.4rem; }
     .projects-grid,
     .personal-card-grid,
-    .hobby-cards-grid,
-    .skills-cards-container { grid-template-columns: 1fr; }
+    .skills-list-container,
+    .hobby-list-container { grid-template-columns: 1fr; }
     .footer-social-links { gap: 1.5rem; }
     .footer-social-links a { width: 44px; height: 44px; font-size: 1.3rem; }
     #themeToggle { width: 46px; height: 46px; font-size: 1.2rem; }
@@ -622,4 +626,33 @@
     .personal-card h3 { font-size: 1.05rem; }
     .project-card p,
     .personal-card p { font-size: 0.85rem; }
+  
+    /* Modals - Full screen on mobile */
+    .modal-content {
+      width: 95%;
+      max-width: 95%;
+      padding: 1.5rem;
+      margin: 5% auto;
+    }
+    .skills-list-container,
+    .hobby-list-container {
+      gap: 0.8rem;
+    }
+    .skill-item,
+    .hobby-item {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+    .skill-header,
+    .hobby-header {
+      font-size: 0.95rem;
+    }
+    .skill-header i,
+    .hobby-header i {
+      font-size: 1rem;
+    }
+    .skill-item p,
+    .hobby-item p {
+      font-size: 0.85rem;
+    }
   }
