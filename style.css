@@ -747,3 +747,99 @@
       padding: 0.2rem 0.4rem;
     }
   }
+
+/* =============================================================================
+   ULTIMATE MOBILE PORTRAIT FIX (Overrides all previous rules)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Full bleed container */
+  .container {
+    padding: 0.6rem !important;
+    margin: 0.8rem auto !important;
+    max-width: none !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Hero: Smaller and scrollable */
+  .hero-section {
+    height: 400px !important;
+    padding: 0.6rem !important;
+  }
+  .hero-content {
+    padding: 0 0.4rem !important;
+    max-width: 100% !important;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  .hero-content p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Social Icons: Tiny and tight */
+  .social-links {
+    gap: 0.6rem !important;
+    margin: 1rem 0 !important;
+  }
+  .social-icon-button {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+
+  /* Modals: Full bleed, no overflow */
+  .modal-content {
+    width: calc(100% - 1.2rem) !important; /* Account for body padding */
+    max-width: none !important;
+    padding: 1rem !important;
+    margin: 2% auto !important;
+    box-sizing: border-box;
+  }
+
+  /* Skill/Hobby Items: No right overflow */
+  .skill-item, .hobby-item {
+    padding: 0.6rem !important;
+    font-size: 0.8rem !important;
+    margin: 0 -0.6rem !important; /* Compensate for container padding */
+    width: calc(100% + 1.2rem) !important;
+  }
+  .skill-item ul, .hobby-item ul {
+    padding-left: 1rem !important;
+  }
+  .skill-header, .hobby-header {
+    font-size: 0.85rem !important;
+  }
+  .skill-header i, .hobby-header i {
+    font-size: 0.9rem !important;
+  }
+
+  /* Section titles */
+  h2.section-title {
+    font-size: 1.2rem !important;
+    margin: 1.5rem 0 0.6rem !important;
+  }
+
+  /* Cards */
+  .skills-card, #hobbies-card {
+    padding: 1rem !important;
+  }
+  .skills-card h3, #hobbies-card h3 {
+    font-size: 1.1rem !important;
+  }
+  .skills-card li {
+    font-size: 0.85rem !important;
+  }
+
+  /* Close button */
+  .close-button {
+    font-size: 1.6rem !important;
+    padding: 0.1rem 0.3rem !important;
+  }
+}
+
