@@ -764,7 +764,7 @@
 
   /* Hero: Smaller and scrollable */
   .hero-section {
-    height: 700px !important;
+    height: 500px !important;
     padding: 0.6rem !important;
   }
   .hero-content {
@@ -784,7 +784,7 @@
 
   /* Social Icons: Tiny and tight */
   .social-links {
-    gap: 0.3rem !important;
+    gap: 0.4rem !important;
     margin: 1rem 0 !important;
   }
   .social-icon-button {
@@ -842,6 +842,7 @@
     padding: 0.1rem 0.3rem !important;
   }
 }
+
 
 
 
