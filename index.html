@@ -1,63 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Page Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semi Mamou</title>
-
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Font Awesome Icons (for social/media icons) -->
+    <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
-
-    <!-- Custom Favicon: Red "S" on transparent background -->
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23990000%22>S</text></svg>">
   </head>
   <body>
-    <!-- =============================================================================
-         PAGE LOADER
-         Shows a spinning animation while the page loads, then fades out.
-         ========================================================================== -->
+    <!-- Page Loader -->
     <div id="loader">
       <div class="spinner"></div>
     </div>
 
-    <!-- =============================================================================
-         ANIMATED PARTICLE BACKGROUND
-         Subtle red particles floating in the background for visual depth.
-         ========================================================================== -->
+    <!-- Animated Background -->
     <div id="particles"></div>
 
-    <!-- =============================================================================
-         THEME TOGGLE BUTTON
-         Fixed in top-right corner; toggles between dark and light mode.
-         ========================================================================== -->
-    <div class="theme-toggle">
+    <!-- Theme Toggle (Moved to Bottom-Left) -->
+    <div class="theme-toggle-bottom-left">
       <button id="themeToggle" aria-label="Toggle dark/light mode">
         <i class="fas fa-moon"></i>
       </button>
     </div>
 
-    <!-- =============================================================================
-         BACK TO TOP BUTTON
-         Appears after scrolling down; smoothly scrolls to top when clicked.
-         ========================================================================== -->
+    <!-- Back to Top Button -->
     <button id="backToTop" aria-label="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- =============================================================================
-         MAIN CONTENT WRAPPER
-         Centers content and limits max width for readability.
-         ========================================================================== -->
     <div class="container main-content">
-
-      <!-- =============================================================================
-           HERO SECTION
-           Full-height background image with overlay text. Includes intro and social links.
-           ========================================================================== -->
+      <!-- Hero Section -->
       <section class="hero-section" id="hero">
         <div class="hero-content">
           <h1>Hi, I'm Semi</h1>
@@ -71,8 +46,6 @@
             If you’re crafting something meaningful—tech, community, or just a better way to live—I’m always up for a chat.<br>
             Hit me up on any of my social media channels and when I am not sleeping I will answer right away.
           </p>
-
-          <!-- Social Media Buttons (Icon Only) -->
           <div class="social-links">
             <a href="https://www.youtube.com/@Semilarious" class="social-icon-button" aria-label="YouTube">
               <i class="fab fa-youtube"></i>
@@ -96,13 +69,9 @@
         </div>
       </section>
 
-      <!-- =============================================================================
-           CURRENT FOCUS AREAS
-           Grid of 6 project cards showing active ventures.
-           ========================================================================== -->
+      <!-- Current Focus Areas -->
       <h2 class="section-title">Current Focus Areas</h2>
       <div class="projects-grid">
-        <!-- Each card includes icon, title, description, and tech tags -->
         <div class="project-card">
           <i class="fas fa-coins icon-large"></i>
           <h3>Renegade</h3>
@@ -165,10 +134,7 @@
         </div>
       </div>
 
-      <!-- =============================================================================
-           SKILLS SECTION (CLICKABLE TRAILER)
-           Shows a summary of skills; clicking opens a detailed modal.
-           ========================================================================== -->
+      <!-- Skills – Clickable Card (Trailer) -->
       <h2 class="section-title">Skills</h2>
       <div class="skills-card" id="skills-card">
         <h3>What I Bring to the Table</h3>
@@ -179,17 +145,13 @@
         </ul>
       </div>
 
-      <!-- =============================================================================
-           SKILLS MODAL (DEEP DIVE)
-           Appears when Skills card is clicked. Shows detailed bullet-point lists.
-           ========================================================================== -->
+      <!-- Skills Modal (Vertical List) -->
       <div id="skills-modal" class="modal">
         <div class="modal-content">
           <span class="close-button" id="close-skills">&times;</span>
           <h3>What I Bring to the Table</h3>
-          <div class="skills-cards-container">
-            <!-- Each skill category is a card with icon, title, and bullet points -->
-            <div class="skill-card technical">
+          <div class="skills-list-container">
+            <div class="skill-item technical">
               <div class="skill-header"><i class="fas fa-tools"></i> <span>Technical</span></div>
               <ul>
                 <li>Master’s in Electrical Energy & Mobility Systems; bachelor’s in Systems Engineering – both with distinction.</li>
@@ -199,7 +161,7 @@
                 <li>Now learning AI/ML basics, HTML/CSS/JS and automation so my next board ships with its own tiny web UI.</li>
               </ul>
             </div>
-            <div class="skill-card professional">
+            <div class="skill-item professional">
               <div class="skill-header"><i class="fas fa-users"></i> <span>People & Communication</span></div>
               <ul>
                 <li>Tutored and lectured in my own Master’s programme—turned power-electronics theory into workshops students actually enjoyed.</li>
@@ -210,7 +172,7 @@
                 <li>Comfortable on stage or one-to-one—live talks, podcasts, pitch contests.</li>
               </ul>
             </div>
-            <div class="skill-card life">
+            <div class="skill-item life">
               <div class="skill-header"><i class="fas fa-tractor"></i> <span>Life Skills</span></div>
               <ul>
                 <li>Licensed for tractors, forklifts, loaders, motorbikes, 4-WD trucks.</li>
@@ -220,7 +182,7 @@
                 <li>5 a.m. milking shift—best cure for procrastination.</li>
               </ul>
             </div>
-            <div class="skill-card global">
+            <div class="skill-item global">
               <div class="skill-header"><i class="fas fa-globe-americas"></i> <span>Global Mindset</span></div>
               <ul>
                 <li>Lived/worked in 25+ countries; negotiated in German, explained grounding in Arabic, shared a tractor cabin with Kiwi, Peruvian and Japanese backpackers.</li>
@@ -232,42 +194,39 @@
         </div>
       </div>
 
-      <!-- =============================================================================
-           HOBBIES & INTERESTS (CLICKABLE CARD)
-           Opens a modal with categorized hobby cards.
-           ========================================================================== -->
+      <!-- Hobbies & Interests – Clickable Card -->
       <h2 class="section-title">Hobbies & Interests</h2>
       <div class="personal-card" id="hobbies-card">
         <h3>Curious About My Interests?</h3>
       </div>
 
-      <!-- Hobbies Modal -->
+      <!-- Hobbies Modal (Vertical List) -->
       <div id="hobbies-modal" class="modal">
         <div class="modal-content">
           <span class="close-button" id="close-hobbies">&times;</span>
           <h3>My Hobbies & Interests</h3>
-          <div class="hobby-cards-grid">
-            <div class="hobby-card">
+          <div class="hobby-list-container">
+            <div class="hobby-item">
               <div class="hobby-header"><i class="fas fa-book-open"></i> <span>Books</span></div>
               <p>Mainly self-education, human behavior and how to get better</p>
             </div>
-            <div class="hobby-card">
+            <div class="hobby-item">
               <div class="hobby-header"><i class="fas fa-chart-line"></i> <span>Trading</span></div>
               <p>Technical Analysis of Crypto, Stocks, Forex. Went from 40k to 0.</p>
             </div>
-            <div class="hobby-card">
+            <div class="hobby-item">
               <div class="hobby-header"><i class="fas fa-laptop-code"></i> <span>Learning</span></div>
               <p>Try to understand how the digital world is made. Improving how can I become an advanced human.</p>
             </div>
-            <div class="hobby-card">
+            <div class="hobby-item">
               <div class="hobby-header"><i class="fas fa-globe-americas"></i> <span>Traveling</span></div>
               <p>25+ countries, every place teaches me something new — from chaos to calm, from markets to mountains.</p>
             </div>
-            <div class="hobby-card">
+            <div class="hobby-item">
               <div class="hobby-header"><i class="fas fa-dumbbell"></i> <span>Sport</span></div>
               <p>Gym, hiking, biking. Also love training, nutrition, and pushing limits.</p>
             </div>
-            <div class="hobby-card">
+            <div class="hobby-item">
               <div class="hobby-header"><i class="fas fa-gamepad"></i> <span>Enjoyment</span></div>
               <p>Gaming, partying (alcohol-free, but still fun!), music, and celebrating life.</p>
             </div>
@@ -275,10 +234,7 @@
         </div>
       </div>
 
-      <!-- =============================================================================
-           THOUGHTS SECTION
-           Links to individual blog-style pages (e.g., "Why I Quit").
-           ========================================================================== -->
+      <!-- Thoughts – Linked to Individual Pages -->
       <h2 class="section-title">Thoughts</h2>
       <div class="personal-card-grid">
         <a href="who-am-i.html" class="personal-card thought-link">
@@ -303,10 +259,7 @@
         </a>
       </div>
 
-      <!-- =============================================================================
-           CONTACT SECTION
-           Email and current location.
-           ========================================================================== -->
+      <!-- Contact -->
       <h2 class="section-title">Wanna get in touch?</h2>
       <p>I’m always available for exciting discussions.</p>
       <div class="contact-info">
@@ -314,10 +267,7 @@
         <p><i class="fas fa-map-marker-alt"></i> Currently in Australia 🇦🇺</p>
       </div>
 
-      <!-- =============================================================================
-           FOOTER SOCIAL ICONS
-           Smaller icons at the bottom for quick access.
-           ========================================================================== -->
+      <!-- Footer Social Icons -->
       <div class="footer-social-links">
         <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
@@ -328,22 +278,13 @@
       </div>
     </div>
 
-    <!-- =============================================================================
-         FOOTER
-         Simple attribution at the bottom.
-         ========================================================================== -->
     <footer>
       Made with HTML5, coffee, and a bit of AI 🌤️
     </footer>
 
-    <!-- =============================================================================
-         EXTERNAL SCRIPTS
-         ========================================================================== -->
-
-    <!-- Particles.js for animated background -->
+    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script>
-      // Configure red particle background
       tsParticles.load("particles", {
         fpsLimit: 60,
         particles: {
@@ -351,19 +292,16 @@
           color: { value: "#990000" },
           opacity: { value: { min: 0.2, max: 0.5 }, random: true },
           size: { value: { min: 1, max: 4 } },
-          move: { enable: true, speed: 0.7, direction: "none", random: true, straight: false }
+          move: { enable: true, speed: 0.7, direction: "none", random: true }
         },
         interactivity: { detectsOn: "canvas", events: { onHover: { enable: false } } },
         detectRetina: true
       });
     </script>
 
-    <!-- =============================================================================
-         MAIN JAVASCRIPT
-         Handles theme toggle, modals, parallax, loader, and scroll behavior.
-         ========================================================================== -->
+    <!-- Main Scripts -->
     <script>
-      // Theme Toggle: saves preference in localStorage
+      // Theme Toggle (Bottom-Left)
       const themeToggle = document.getElementById('themeToggle');
       const body = document.body;
       const savedTheme = localStorage.getItem('theme');
@@ -386,13 +324,13 @@
         }
       });
 
-      // Parallax effect on hero background
+      // Parallax
       const hero = document.getElementById('hero');
       window.addEventListener('scroll', () => {
         hero.style.backgroundPositionY = -(window.pageYOffset * 0.3) + 'px';
       });
 
-      // Back to Top button visibility
+      // Back to Top
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
         backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
@@ -402,7 +340,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
-      // Page loader fade-out
+      // Loader
       document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 300);
       });
