@@ -764,7 +764,7 @@
 
   /* Hero: Smaller and scrollable */
   .hero-section {
-    height: 400px !important;
+    height: 500px !important;
     padding: 0.6rem !important;
   }
   .hero-content {
@@ -842,4 +842,5 @@
     padding: 0.1rem 0.3rem !important;
   }
 }
+
 
