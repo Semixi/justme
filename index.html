@@ -1,202 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semi Mamou</title>
-    <link rel="stylesheet" href="style.css">   <!--  ← only change needed -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
   </head>
-<body>
-
-<!-- Theme Toggle -->
-<div class="theme-toggle">
-  <button id="themeToggle" aria-label="Toggle dark/light mode">
-    <i class="fas fa-moon"></i>
-  </button>
-</div>
-  <div class="container">
-
-    <!-- Title outside the grid -->
-<h1>Hi, I'm Semi</h1>
-<!-- Intro Section -->
-<div class="intro-section"> <!-- This is the new wrapper -->
-  <div class="intro-text">
-      <div class="intro-paragraph">
-      <p>An engineer, creator, trader (currently in the red 😅), and founder from Austria.
-      I quit my “normal” life in May 2023 — sold my car, bike, and even joked about selling my girlfriend — to start a real-life Hobbit journey across the globe.<br>
-      I’ve been to India, Nepal, Gulf countries, Southeast Asia, Australia, Europe… and right now thinking about the next steps in a rural area in Western Australia.
-      I’m still learning trading (still paying off a €40 k tuition fee to Mr. Market 😅), working with the crypto project <a href="https://myrenegade.net/  ">Renegade</a>, and running my Estonian company <a href="https://www.inforegister.ee/en/17343201-MAMOU-COLLECTIVE-OU/  ">Mamou Collective OÜ</a>.
-      If you’re crafting something meaningful—tech, community, or just a better way to live—I’m always up for a chat.
-    <br>Hit me up on any of my social media channels and when I am not sleaping I will answer right away. </p>
-    
-    </div>  
-  </div>
-  <img class="profile-pic" src="me_1.jpg" alt="Semi Mamou">
-</div>
-
-            <!-- Social Media Buttons -->
-            <div class="social-links">
-              <a href="https://www.youtube.com/@Semilarious" class="social-link-button">
-                <i class="fab fa-youtube"></i> YouTube
-              </a>
-              <a href="https://www.instagram.com/semilarious/" class="social-link-button">
-                <i class="fab fa-instagram"></i> Instagram
-              </a>
-              <a href="https://www.tiktok.com/@semilarious" class="social-link-button">
-                <i class="fab fa-tiktok"></i> TikTok
-              </a>
-              <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/" class="social-link-button">
-                <i class="fab fa-facebook"></i> Facebook
-              </a>
-              <a href="https://at.linkedin.com/in/semi-mamou-037954ba" class="social-link-button">
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-              <a href="https://www.couchsurfing.com/people/semi-mamou-1" class="social-link-button">
-                <i class="fas fa-globe"></i> Couchsurfing
-              </a>
-            </div>
-    <!-- Hobbies & Interests -->
-    <h2 class="section-title">Hobbies & Interests</h2>
-    <ul>
-      <li>Reading books on self-education, influence, and human behavior (“how to manipulate people” — just kidding… or am I? 😏)</li>
-      <li>Meeting new people and building genuine connections</li>
-      <li>Learning web development to help others and understand the craft</li>
-      <li>Traveling with purpose — every country teaches me something new</li>
-    </ul>
-
-    <!-- Skills -->
-    <h2 class="section-title">Skills</h2>
-    <ul>
-      <li><strong>Technical:</strong> PCB Design (Altium, Cadence), MATLAB/Simulink, C/C++, LabVIEW, Soldering</li>
-      <li><strong>Professional:</strong> Community Management, Public Speaking, Mentoring, Technical Training</li>
-      <li><strong>Life Skills:</strong> Tractor driving, milking buffaloes and cows, forklift operation, first aid, festival bartending — and being an awesome human 😄</li>
-    </ul>
-
-<!-- Projects & Focus Areas -->
-<h2 class="section-title">Current Focus Areas</h2>
-<div class="projects-grid">
-  <div class="project-card">
-    <i class="fas fa-coins icon-large"></i>
-    <h3>Renegade</h3>
-    <p>Community Manager for a next-gen crypto banking project. Building trust, support, and real utility in Web3.</p>
-    <div class="tech-tags">
-      <span class="tech-tag">Crypto</span>
-      <span class="tech-tag">Community</span>
-      <span class="tech-tag">Support</span>
-    </div>
-  </div>
-  <div class="project-card">
-    <i class="fas fa-building icon-large"></i>
-    <h3>Mamou Collective OÜ</h3>
-    <p>My Estonian-registered company for tech, consulting, and experimental ventures. Legally lean, globally minded.</p>
-    <div class="tech-tags">
-      <span class="tech-tag">Estonia</span>
-      <span class="tech-tag">Freelance</span>
-      <span class="tech-tag">Innovation</span>
-    </div>
-  </div>
-  <div class="project-card">
-    <i class="fas fa-chart-line icon-large"></i>
-    <h3>Trading Journey</h3>
-    <p>Learning price action & risk management with mentor Eurotrader. Down €40k, but up in wisdom. Still in the lab.</p>
-    <div class="tech-tags">
-      <span class="tech-tag">Trading</span>
-      <span class="tech-tag">Mentorship</span>
-      <span class="tech-tag">Markets</span>
-    </div>
-  </div>
-  <div class="project-card">
-    <i class="fas fa-robot icon-large"></i>
-    <h3>AI & Automation</h3>
-    <p>Diving into AI tools, scripting, and app development. The future is automated — and I’m building my seat on the train.</p>
-    <div class="tech-tags">
-      <span class="tech-tag">AI</span>
-      <span class="tech-tag">Automation</span>
-      <span class="tech-tag">Future-Proofing</span>
-    </div>
-  </div>
-  <div class="project-card">
-    <i class="fas fa-code icon-large"></i>
-    <h3>Web Craft</h3>
-    <p>Learning HTML, CSS, JS — not just to build sites, but to understand how the digital world is made. One div at a time.</p>
-    <div class="tech-tags">
-      <span class="tech-tag">Web Dev</span>
-      <span class="tech-tag">Self-Education</span>
-      <span class="tech-tag">Creation</span>
-    </div>
-  </div>
-  <div class="project-card">
-    <i class="fas fa-globe icon-large"></i>
-    <h3>Global Classroom</h3>
-    <p>Traveling across 25+ countries to learn from people, cultures, and chaos. Collecting skills, stories, and human connections.</p>
-    <div class="tech-tags">
-      <span class="tech-tag">Travel</span>
-      <span class="tech-tag">Learning</span>
-      <span class="tech-tag">Connection</span>
-    </div>
-  </div>
-</div>
-
-    <!-- Thoughts -->
-    <h2 class="section-title">Thoughts</h2>
-    <ul class="thoughts-list">
-      <li><a href="why-i-quit.html">Why I Quit Everything in 2023?</a></li>
-      <li><a href="#">Trading: From €40k to 0! From Loss to Learning</a></li>
-      <li><a href="#">How Couchsurfing Changed My Travel Experience</a></li>
-      <li><a href="#">My Journey so far</a></li>
-    </ul>
-
-    <!-- Contact -->
-    <h2 class="section-title">Wanna get in touch?</h2>
-    <p>I’m always available for exciting discussions.</p>
-    <div class="contact-info">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:semi.mamou@gmail.com">semi.mamou@gmail.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> Currently in Western Australia 🇦🇺</p>
-    </div>
-    <div class="social-links">
-      <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@semilarious"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/"><i class="fab fa-facebook"></i></a>
-      <a href="https://at.linkedin.com/in/semi-mamou-037954ba"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.couchsurfing.com/people/semi-mamou-1"><i class="fas fa-globe"></i></a>
+  <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="themeToggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
 
-  </div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <footer>
-    Made with HTML5, coffee, and a bit of AI 🌤️
-  </footer>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="hero-content">
+          <h1>Hi, I'm Semi</h1>
+          <p>
+            An engineer, creator, trader (currently in the red 😅), and founder from Austria.
+            I quit my “normal” life in May 2023 — sold my car, bike, and even joked about selling my girlfriend — to start a real-life Hobbit journey across the globe.<br>
+            I’ve been to India, Nepal, Gulf countries, Southeast Asia, Australia, Europe… and right now thinking about the next steps in a rural area in Western Australia.
+            I’m still learning trading (still paying off a €40k tuition fee to Mr. Market 😅), working with the crypto project
+            <a href="https://myrenegade.net/">Renegade</a>, and running my Estonian company
+            <a href="https://www.inforegister.ee/en/17343201-MAMOU-COLLECTIVE-OU/">Mamou Collective OÜ</a>.
+            If you’re crafting something meaningful—tech, community, or just a better way to live—I’m always up for a chat.<br>
+            Hit me up on any of my social media channels and when I am not sleeping I will answer right away.
+          </p>
+        </div>
+      </section>
 
-  <!-- Font Awesome Icons -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+      <!-- Social Media Buttons (Icon Only) -->
+      <div class="social-links">
+        <a href="https://www.youtube.com/@Semilarious" class="social-icon-button" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/semilarious/" class="social-icon-button" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@semilarious" class="social-icon-button" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/" class="social-icon-button" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://at.linkedin.com/in/semi-mamou-037954ba" class="social-icon-button" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.couchsurfing.com/people/semi-mamou-1" class="social-icon-button" aria-label="Couchsurfing">
+          <i class="fas fa-globe"></i>
+        </a>
+      </div>
 
-<!-- Theme Toggle Script -->
-<script>
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-  const savedTheme = localStorage.getItem('theme');
-  
-  if (savedTheme === 'light') {
-    body.classList.add('light-mode');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    themeToggle.classList.add('dark-mode');
-  }
+      <!-- Rest of your content stays the same -->
+      <!-- Hobbies & Interests -->
+      <h2 class="section-title">Hobbies & Interests</h2>
+      <ul>
+        <li>Reading books on self-education, influence, and human behavior (“how to manipulate people” — just kidding… or am I? 😏)</li>
+        <li>Meeting new people and building genuine connections</li>
+        <li>Learning web development to help others and understand the craft</li>
+        <li>Traveling with purpose — every country teaches me something new</li>
+      </ul>
 
-  themeToggle.addEventListener('click', () => {
-    if (body.classList.contains('light-mode')) {
-      body.classList.remove('light-mode');
-      themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-      themeToggle.classList.remove('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      body.classList.add('light-mode');
-      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-      themeToggle.classList.add('dark-mode');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-</script>
-</script>
-</body>
+      <!-- Skills -->
+      <h2 class="section-title">Skills</h2>
+      <ul>
+        <li><strong>Technical:</strong> PCB Design (Altium, Cadence), MATLAB/Simulink, C/C++, LabVIEW, Soldering</li>
+        <li><strong>Professional:</strong> Community Management, Public Speaking, Mentoring, Technical Training</li>
+        <li><strong>Life Skills:</strong> Tractor driving, milking buffaloes and cows, forklift operation, first aid, festival bartending — and being an awesome human 😄</li>
+      </ul>
+
+      <!-- Projects & Focus Areas -->
+      <h2 class="section-title">Current Focus Areas</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <i class="fas fa-coins icon-large"></i>
+          <h3>Renegade</h3>
+          <p>Community Manager for a next-gen crypto banking project. Building trust, support, and real utility in Web3.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Crypto</span>
+            <span class="tech-tag">Community</span>
+            <span class="tech-tag">Support</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-building icon-large"></i>
+          <h3>Mamou Collective OÜ</h3>
+          <p>My Estonian-registered company for tech, consulting, and experimental ventures. Legally lean, globally minded.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Estonia</span>
+            <span class="tech-tag">Freelance</span>
+            <span class="tech-tag">Innovation</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-chart-line icon-large"></i>
+          <h3>Trading Journey</h3>
+          <p>Learning price action & risk management with mentor Eurotrader. Down €40k, but up in wisdom. Still in the lab.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Trading</span>
+            <span class="tech-tag">Mentorship</span>
+            <span class="tech-tag">Markets</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-robot icon-large"></i>
+          <h3>AI & Automation</h3>
+          <p>Diving into AI tools, scripting, and app development. The future is automated — and I’m building my seat on the train.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">AI</span>
+            <span class="tech-tag">Automation</span>
+            <span class="tech-tag">Future-Proofing</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-code icon-large"></i>
+          <h3>Web Craft</h3>
+          <p>Learning HTML, CSS, JS — not just to build sites, but to understand how the digital world is made. One div at a time.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Web Dev</span>
+            <span class="tech-tag">Self-Education</span>
+            <span class="tech-tag">Creation</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-globe icon-large"></i>
+          <h3>Global Classroom</h3>
+          <p>Traveling across 25+ countries to learn from people, cultures, and chaos. Collecting skills, stories, and human connections.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Travel</span>
+            <span class="tech-tag">Learning</span>
+            <span class="tech-tag">Connection</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thoughts -->
+      <h2 class="section-title">Thoughts</h2>
+      <ul class="thoughts-list">
+        <li><a href="#">Who am I?</a></li>
+        <li><a href="why-i-quit.html">Why I Quit Everything in 2023?</a></li>
+        <li><a href="#">Trading: From €40k to 0! Did I quit?</a></li>
+        <li><a href="#">How Traveling changed my life</a></li>
+        <li><a href="#">My Journey so far</a></li>
+      </ul>
+
+      <!-- Contact -->
+      <h2 class="section-title">Wanna get in touch?</h2>
+      <p>I’m always available for exciting discussions.</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:semi.mamou@gmail.com">semi.mamou@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Currently in Australia 🇦🇺</p>
+      </div>
+
+      <!-- Footer Social Icons -->
+      <div class="footer-social-links">
+        <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@semilarious"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/"><i class="fab fa-facebook"></i></a>
+        <a href="https://at.linkedin.com/in/semi-mamou-037954ba"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.couchsurfing.com/people/semi-mamou-1"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+
+    <footer>Made with HTML5, coffee, and a bit of AI 🌤️</footer>
+
+    <!-- Scripts -->
+    <script>
+      // Theme Toggle
+      const themeToggle = document.getElementById('themeToggle');
+      const body = document.body;
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggle.classList.add('dark-mode');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('light-mode')) {
+          body.classList.remove('light-mode');
+          themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          themeToggle.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          body.classList.add('light-mode');
+          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+          themeToggle.classList.add('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // Smooth Parallax (slower = smoother)
+      const hero = document.getElementById('hero');
+      window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        hero.style.backgroundPositionY = -(scrollY * 0.3) + 'px'; // 0.3 = smooth parallax
+      });
+
+      // Back to Top Button
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTop.style.opacity = '1';
+          backToTop.style.pointerEvents = 'auto';
+        } else {
+          backToTop.style.opacity = '0';
+          backToTop.style.pointerEvents = 'none';
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+  </body>
 </html>
