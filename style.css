@@ -1,13 +1,100 @@
-/* === Global Styles === */
-body {
+/* =============================================================================
+   GLOBAL STYLES & VARIABLES
+   ========================================================================== */
+
+   :root {
+    --main-red: #990000;
+    --main-red-light: #ff7f7f;
+    --bg-dark: #000;
+    --text-light: #fff;
+    --card-bg: #1a1a1a;
+    --border-color: #333;
+  }
+  
+  body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    background: #000;
-    color: #fff;
+    background: var(--bg-dark);
+    color: var(--text-light);
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
   }
   
+  /* Animated Background */
+  #particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* Main Content Container */
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .main-content {
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* =============================================================================
+     LOADER
+     ========================================================================== */
+  
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid var(--main-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  #loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* =============================================================================
+     TYPOGRAPHY & LINKS
+     ========================================================================== */
+  
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--main-red);
+    margin: 0 0 1.2rem;
+  }
+  h2.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem;
+    color: #ccc;
+  }
   p {
     text-align: justify;
     hyphens: auto;
@@ -16,40 +103,29 @@ body {
     word-break: normal;
     margin-bottom: 1rem;
   }
-  
   a {
-    color: #ff4d4d;
+    color: var(--main-red);
     text-decoration: none;
     transition: color 0.2s ease;
   }
   a:hover {
-    color: #ff7f7f;
+    color: var(--main-red-light);
     text-decoration: underline;
   }
   
-  .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    box-sizing: border-box;
+  /* Bullet Lists */
+  ul {
+    padding-left: 1.5rem;
+    margin: 0.8rem 0;
+  }
+  li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
   }
   
-  h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #ff4d4d;
-    margin: 0 0 1.2rem;
-  }
-  
-  h2.section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 2.5rem 0 1rem;
-    color: #ccc;
-  }
-  
-  /* === Hero Section === */
-
+  /* =============================================================================
+     HERO SECTION
+     ========================================================================== */
   
   .hero-section {
     position: relative;
@@ -63,7 +139,6 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  
   .hero-section::before {
     content: '';
     position: absolute;
@@ -71,10 +146,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75); /* Keep this consistent */
+    background: rgba(0, 0, 0, 0.75);
     z-index: 1;
   }
-  
   .hero-content {
     position: relative;
     z-index: 2;
@@ -85,172 +159,108 @@ body {
     transform: translateY(30px);
     animation: fadeInUp 1s ease-out forwards;
   }
-  
-  /* Ensure hero text stays white in both themes */
-.hero-content,
-/* Preserve hero headline color in both themes */
-.hero-content h1 {
-    color: #ff4d4d !important;
-  }
-  .hero-content a {
-    color: white !important;
-  }
-.hero-content p {
-  color: white !important;
-}
-
+  .hero-content h1 { color: var(--main-red) !important; font-size: 3.2rem; margin-bottom: 1.2rem; }
+  .hero-content p { font-size: 1.25rem; line-height: 1.7; }
   @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    to { opacity: 1; transform: translateY(0); }
   }
   
-  .hero-content h1 {
-    font-size: 3.2rem; /* 👈 Bigger headline */
-    margin-bottom: 1.2rem;
-    color: #ff4d4d;
-  }
+  /* =============================================================================
+     SOCIAL BUTTONS
+     ========================================================================== */
   
-  .hero-content p {
-    font-size: 1.25rem; /* 👈 Bigger paragraph */
-    line-height: 1.7;
-    text-align: center;
-  }
-  
-  /* === Social Buttons === */
-  .social-links {
+  .social-links, .footer-social-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
     margin: 2rem 0;
   }
-  
-  .social-icon-button {
+  .social-icon-button,
+  .footer-social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 56px;
     height: 56px;
-    border: 2px solid #ff5555;
+    border: 2px solid var(--main-red);
     border-radius: 50%;
-    color: #ff5555;
+    color: var(--main-red);
     font-size: 1.7rem;
     text-decoration: none;
     transition: all 0.3s ease;
     background: transparent;
   }
-  
-  .social-icon-button:hover {
-    background-color: #ff5555;
+  .social-icon-button:hover,
+  .footer-social-links a:hover {
+    background-color: var(--main-red);
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(255, 85, 85, 0.3);
   }
-  
-  /* === Footer Social Icons === */
   .footer-social-links {
-    display: flex;
-    justify-content: center;
     gap: 2rem;
-    margin: 1.5rem 0;
   }
-  
   .footer-social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 50px;
     height: 50px;
-    border: 2px solid #ff5555;
-    border-radius: 50%;
-    color: #ff5555;
     font-size: 1.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
   }
   
-  .footer-social-links a:hover {
-    background-color: #ff5555;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(255, 85, 85, 0.3);
-  }
+  /* =============================================================================
+     PROJECT CARDS (Focus Areas)
+     ========================================================================== */
   
-  /* === Project Grid, Skills, etc. — keep as before */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin-top: 1.2rem;
   }
-  
-  @keyframes cardPulseIn {
-    0% { opacity: 0; transform: scale(0.95); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-  
   .project-card {
     background: #111;
     padding: 1.5rem;
     border-radius: 12px;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    animation: cardPulseIn 0.5s ease-out forwards;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .projects-grid .project-card:nth-child(n) { animation-delay: calc(0.1s * var(--n)); }
-  .projects-grid .project-card:nth-child(1) { --n: 1; }
-  .projects-grid .project-card:nth-child(2) { --n: 2; }
-  .projects-grid .project-card:nth-child(3) { --n: 3; }
-  .projects-grid .project-card:nth-child(4) { --n: 4; }
-  .projects-grid .project-card:nth-child(5) { --n: 5; }
-  .projects-grid .project-card:nth-child(6) { --n: 6; }
-  
   .project-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     background: #1a1a1a;
   }
-  
   .project-card i.icon-large {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    color: #ff4d4d;
+    color: var(--main-red);
     transition: all 0.3s ease;
     display: block;
   }
-  
   .project-card:hover i.icon-large {
     color: #fff;
     transform: scale(1.15);
     text-shadow: 0 0 12px rgba(255, 77, 77, 0.7);
   }
-  
   .project-card h3 {
     margin: 0 0 0.6rem;
     font-size: 1.15rem;
     color: #fff;
   }
-  
   .project-card p {
     margin: 0.4rem 0;
     font-size: 0.92rem;
     color: #bbb;
     flex-grow: 1;
   }
-  
   .tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-top: 0.8rem;
   }
-  
   .tech-tag {
     background: #330000;
     color: #fff;
@@ -262,27 +272,211 @@ body {
     transition: background 0.2s ease, transform 0.2s ease;
   }
   .tech-tag:hover {
-    background: #440000;
+    background: #890101;
     transform: translateY(-1px);
   }
   
-  .thoughts-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+  /* =============================================================================
+     SKILLS CARD (Clickable Trailer)
+     ========================================================================== */
+  
+  .skills-card {
+    background: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.2s ease;
   }
-  .thoughts-list li { margin-bottom: 0.6rem; }
-  .thoughts-list a { color: #ff4d4d; }
-  .thoughts-list a:hover { color: #ff7f7f; text-decoration: underline; }
+  .skills-card:hover {
+    background: #222;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+  .skills-card h3 {
+    color: var(--main-red);
+    margin-top: 0;
+  }
+  .skills-card ul {
+    padding-left: 1.5rem;
+    margin: 0;
+  }
+  .skills-card li {
+    margin-bottom: 0.6rem;
+    color: #ccc;
+  }
+  
+  /* =============================================================================
+     HOBBIES CARD (Clickable)
+     ========================================================================== */
+  
+  #hobbies-card {
+    background: var(--card-bg);
+    padding: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  #hobbies-card:hover {
+    background: #222;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* =============================================================================
+     MODALS (Skills & Hobbies)
+     ========================================================================== */
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+  }
+  .modal-content {
+    background-color: #111;
+    color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close-button:hover {
+    color: var(--main-red);
+  }
+  
+  /* Skills Modal Cards */
+  .skills-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .skill-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  .skill-card:hover {
+    background: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    color: var(--main-red);
+    font-size: 1rem;
+  }
+  .skill-header i { font-size: 1.1rem; }
+  
+  /* Hobbies Modal Cards */
+  .hobby-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .hobby-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  .hobby-card:hover {
+    background: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .hobby-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+    color: var(--main-red);
+    font-size: 1rem;
+  }
+  .hobby-header i { font-size: 1.1rem; }
+  .hobby-card p { margin: 0; }
+  
+  /* Thoughts Cards */
+  .personal-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+  }
+  .thought-link {
+    text-decoration: none !important;
+  }
+  .personal-card {
+    background: var(--card-bg);
+    padding: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.6;
+    color: inherit;
+  }
+  .personal-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.8rem;
+    color: var(--main-red);
+  }
+  .personal-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  .personal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* =============================================================================
+     CONTACT & FOOTER
+     ========================================================================== */
   
   .contact-info {
     margin-top: 1rem;
     font-size: 0.95rem;
     color: #bbb;
   }
-  .contact-info a { color: #ff4d4d; }
-  .contact-info a:hover { color: #ff7f7f; text-decoration: underline; }
-  
+  .contact-info a { color: var(--main-red); }
+  .contact-info a:hover { color: var(--main-red-light); }
   footer {
     text-align: center;
     margin-top: 3rem;
@@ -292,7 +486,10 @@ body {
     border-top: 1px solid #222;
   }
   
-  /* === Theme Toggle (Bigger) === */
+  /* =============================================================================
+     UI CONTROLS
+     ========================================================================== */
+  
   .theme-toggle {
     position: fixed;
     top: 1.2rem;
@@ -304,34 +501,32 @@ body {
     color: #fff;
     border: none;
     border-radius: 50%;
-    width: 52px;   /* 👈 Bigger */
-    height: 52px;  /* 👈 Bigger */
+    width: 52px;
+    height: 52px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease, transform 0.2s ease;
-    font-size: 1.4rem; /* 👈 Bigger icon */
+    font-size: 1.4rem;
   }
   #themeToggle:hover {
-    background: #ff4d4d;
+    background: var(--main-red);
     transform: rotate(15deg);
   }
   #themeToggle.dark-mode {
-    background: #ff4d4d;
+    background: var(--main-red);
   }
   #themeToggle.dark-mode i {
     color: #000;
   }
-  
-  /* === Back to Top Button === */
   #backToTop {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
     width: 50px;
     height: 50px;
-    background: #ff4d4d;
+    background: var(--main-red);
     color: white;
     border: none;
     border-radius: 50%;
@@ -343,59 +538,72 @@ body {
     z-index: 990;
   }
   #backToTop:hover {
-    background: #ff7f7f;
+    background: var(--main-red-light);
     transform: translateY(-3px);
   }
   
-  /* === Light Mode === */
+  /* =============================================================================
+     LIGHT MODE STYLES
+     ========================================================================== */
+  
   body.light-mode {
     background: #fff;
     color: #000;
   }
   body.light-mode .container { background: #fff; }
   body.light-mode .section-title { color: #333; }
-  body.light-mode .project-card {
-    background: #f8f8f8;
+  body.light-mode .project-card,
+  body.light-mode .skills-card,
+  body.light-mode .personal-card,
+  body.light-mode #hobbies-card,
+  body.light-mode .hobby-card,
+  body.light-mode .skill-card {
+    background: #f9f9f9;
     border-color: #ddd;
+    color: #333;
   }
   body.light-mode .project-card h3,
-body.light-mode .project-card p,
-body.light-mode .project-card .tech-tag {
-  color: #222 !important;
-}
-  body.light-mode .project-card:hover {
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  body.light-mode .personal-card h3,
+  body.light-mode .skills-card h3,
+  body.light-mode .hobby-header,
+  body.light-mode .skill-header {
+    color: var(--main-red);
   }
-  body.light-mode .project-card i.icon-large { color: #ff4d4d; }
-  body.light-mode .project-card:hover i.icon-large {
+  body.light-mode .project-card p,
+  body.light-mode .personal-card p,
+  body.light-mode .hobby-card p,
+  body.light-mode .skills-card li,
+  body.light-mode .skill-card li {
+    color: #555;
+  }
+  body.light-mode .project-card:hover,
+  body.light-mode .personal-card:hover,
+  body.light-mode .hobby-card:hover,
+  body.light-mode .skill-card:hover {
+    background: #f0f0f0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  body.light-mode .modal-content {
+    background: #fff;
     color: #000;
-    text-shadow: 0 0 8px rgba(255, 77, 77, 0.4);
   }
   body.light-mode footer {
     color: #555;
     border-top-color: #eee;
   }
-  body.light-mode p { color: #333; }
-  body.light-mode .contact-info { color: #555; }
   body.light-mode .tech-tag {
-    background: #ff4d4d;
+    background: var(--main-red);
     color: #fff;
     border-color: #cc3d3d;
   }
-  body.light-mode .tech-tag:hover { background: #cc3d3d; }
-  body.light-mode .social-icon-button,
-  body.light-mode .footer-social-links a {
-    color: #ff5555;
-    border-color: #ff5555;
-  }
-  body.light-mode .social-icon-button:hover,
-  body.light-mode .footer-social-links a:hover {
-    background: #ff5555;
-    color: white;
+  body.light-mode .tech-tag:hover {
+    background: #cc3d3d;
   }
   
-  /* === Mobile Responsive === */
+  /* =============================================================================
+     MOBILE RESPONSIVE
+     ========================================================================== */
+  
   @media (max-width: 768px) {
     .container { padding: 0.8rem; margin: 1rem auto; }
     h1 { font-size: 2.4rem; }
@@ -403,8 +611,15 @@ body.light-mode .project-card .tech-tag {
     .hero-content h1 { font-size: 2.4rem; }
     .hero-content p { font-size: 1.1rem; }
     .social-icon-button { width: 48px; height: 48px; font-size: 1.4rem; }
-    .projects-grid { grid-template-columns: 1fr; }
+    .projects-grid,
+    .personal-card-grid,
+    .hobby-cards-grid,
+    .skills-cards-container { grid-template-columns: 1fr; }
     .footer-social-links { gap: 1.5rem; }
     .footer-social-links a { width: 44px; height: 44px; font-size: 1.3rem; }
     #themeToggle { width: 46px; height: 46px; font-size: 1.2rem; }
+    .project-card h3,
+    .personal-card h3 { font-size: 1.05rem; }
+    .project-card p,
+    .personal-card p { font-size: 0.85rem; }
   }
