@@ -664,7 +664,7 @@
    @media (max-width: 768px) {
     /* Hero Section: Smaller height and text */
     .hero-section {
-      height: 280px; /* Reduced from 340px */
+      height: 500px; /* Reduced from 340px */
       padding: 0.8rem;
     }
     .hero-content h1 {
@@ -672,7 +672,7 @@
       margin-bottom: 0.8rem;
     }
     .hero-content p {
-      font-size: 0.95rem; /* Smaller paragraph */
+      font-size: 0.8rem; /* Smaller paragraph */
       padding: 0 0.5rem;
     }
   
@@ -686,8 +686,8 @@
   
     /* Modals: Full width, no overflow */
     .modal-content {
-      width: 96%;
-      max-width: 96%;
+      width: 85%;
+      max-width: 90%;
       padding: 1.2rem;
       margin: 4% auto;
     }
