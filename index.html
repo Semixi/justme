@@ -8,42 +8,49 @@
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23990000%22>S</text></svg>">
+    <link rel="preload" as="image" href="pictures/me_1.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon.png?v=1">
+    <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
+
+
   </head>
   <body>
-    <!-- Page Loader -->
+   <!-- ========================= LANGUAGE SWITCHER ========================= -->
+  <div class="language-switcher" aria-label="Language selector">
+    <a href="./" lang="en" hreflang="en" class="lang-link">EN</a>
+    <span class="lang-separator">|</span>
+    <a href="./de/" lang="de" hreflang="de" class="lang-link">DE</a>
+    <!-- <span class="lang-separator">|</span> -->
+   <!-- ><a href="./ar/" lang="ar" hreflang="ar" class="lang-link">AR</a> -->
+  </div>
+
+    <!-- ========================= LOADER & UI ========================= -->
     <div id="loader">
       <div class="spinner"></div>
     </div>
-
-    <!-- Animated Background -->
     <div id="particles"></div>
-
-    <!-- Theme Toggle (Bottom-Left) -->
     <div class="theme-toggle-bottom-left">
       <button id="themeToggle" aria-label="Toggle dark/light mode">
         <i class="fas fa-moon"></i>
       </button>
     </div>
-
-    <!-- Back to Top Button -->
     <button id="backToTop" aria-label="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <div class="container main-content">
-      <!-- Hero Section -->
+    <!-- ========================= HERO SECTION ========================= -->
+    <div class="container">
       <section class="hero-section" id="hero">
         <div class="hero-content">
           <h1>Hi, I'm Semi</h1>
           <p>
-            An engineer, creator, trader (currently in the red 😅), and founder from Austria.
-            I quit my “normal” life in May 2023 — sold my car, bike, and even joked about selling my girlfriend — to start a real-life Hobbit journey across the globe.<br>
-            I’ve been to India, Nepal, Gulf countries, Southeast Asia, Australia, Europe… and right now thinking about the next steps in a rural area in Western Australia.
+            An engineer, UGC creator, trader (currently in the red 😅), and founder from Austria.
+            I quit my “normal” life in May 2023 — sold my car, bike, and even my girlfriend (Just a small joke regarding my Arabic roots :D) — to start a real-life Hobbit journey across the globe.<br>
+            I’ve been to India, Nepal, Gulf countries, Southeast Asia, Australia, Europe… and right now thinking about the next steps in rural Western Australia.
             I’m still learning trading (still paying off a €40k tuition fee to Mr. Market 😅), working with the crypto project
             <a href="https://myrenegade.net/">Renegade</a>, and running my Estonian company
             <a href="https://www.inforegister.ee/en/17343201-MAMOU-COLLECTIVE-OU/">Mamou Collective OÜ</a>.
-            If you’re crafting something meaningful—tech, community, or just a better way to live—I’m always up for a chat.<br>
+            If you’re crafting something meaningful—tech, community, fitness plans, or digital products—I’m always up for a chat.<br>
           </p>
           <div class="social-links">
             <a href="https://www.youtube.com/@Semilarious" class="social-icon-button" aria-label="YouTube">
@@ -55,7 +62,7 @@
             <a href="https://www.tiktok.com/@semilarious" class="social-icon-button" aria-label="TikTok">
               <i class="fab fa-tiktok"></i>
             </a>
-            <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/" class="social-icon-button" aria-label="Facebook">
+            <a href="https://www.facebook.com/semi.mamou" class="social-icon-button" aria-label="Facebook">
               <i class="fab fa-facebook"></i>
             </a>
             <a href="https://at.linkedin.com/in/semi-mamou-037954ba" class="social-icon-button" aria-label="LinkedIn">
@@ -64,206 +71,142 @@
           </div>
         </div>
       </section>
+    </div>
 
-      <!-- Current Focus Areas -->
+    <!-- ========================= CURRENT FOCUS AREAS ========================= -->
+    <div class="container">
       <h2 class="section-title">Current Focus Areas</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <i class="fas fa-coins icon-large"></i>
-          <h3>Renegade</h3>
+          <div class="icon-title-row">
+            <i class="fas fa-coins icon-large"></i>
+            <h3>Renegade</h3>
+          </div>
           <p>Community Manager for a next-gen crypto banking project. Building trust, support, and real utility in Web3.</p>
           <div class="tech-tags">
             <span class="tech-tag">Crypto</span>
             <span class="tech-tag">Community</span>
-            <span class="tech-tag">Support</span>
+            <span class="tech-tag">Web3</span>
           </div>
         </div>
         <div class="project-card">
-          <i class="fas fa-building icon-large"></i>
-          <h3>Mamou Collective OÜ</h3>
-          <p>My Estonian-registered company for tech, consulting, and experimental ventures. Legally lean, globally minded.</p>
+          <div class="icon-title-row">
+            <i class="fas fa-building icon-large"></i>
+            <h3>Mamou Collective OÜ</h3>
+          </div>
+          <p>My Estonian-registered company for tech, consulting, UGC creation, and experimental ventures. Legally lean, globally minded.</p>
           <div class="tech-tags">
             <span class="tech-tag">Estonia</span>
             <span class="tech-tag">Freelance</span>
-            <span class="tech-tag">Innovation</span>
+            <span class="tech-tag">UGC</span>
           </div>
         </div>
         <div class="project-card">
-          <i class="fas fa-chart-line icon-large"></i>
-          <h3>Trading Journey</h3>
+          <div class="icon-title-row">
+            <i class="fas fa-chart-line icon-large"></i>
+            <h3>Trading Journey</h3>
+          </div>
           <p>Learning price action & risk management with mentor Eurotrader. Down €40k, but up in wisdom. Still in the lab.</p>
           <div class="tech-tags">
-            <span class="tech-tag">Trading</span>
-            <span class="tech-tag">Mentorship</span>
+            <span class="tech-tag">Price Action</span>
+            <span class="tech-tag">Risk Mgmt</span>
             <span class="tech-tag">Markets</span>
           </div>
         </div>
         <div class="project-card">
-          <i class="fas fa-robot icon-large"></i>
-          <h3>AI & Automation</h3>
+          <div class="icon-title-row">
+            <i class="fas fa-robot icon-large"></i>
+            <h3>AI & Automation</h3>
+          </div>
           <p>Diving into AI tools, scripting, and app development. The future is automated — and I’m building my seat on the train.</p>
           <div class="tech-tags">
             <span class="tech-tag">AI</span>
             <span class="tech-tag">Automation</span>
-            <span class="tech-tag">Future-Proofing</span>
+            <span class="tech-tag">No-Code</span>
           </div>
         </div>
         <div class="project-card">
-          <i class="fas fa-code icon-large"></i>
-          <h3>Web Craft</h3>
+          <div class="icon-title-row">
+            <i class="fas fa-code icon-large"></i>
+            <h3>Web Craft</h3>
+          </div>
           <p>Learning HTML, CSS, JS — not just to build sites, but to understand how the digital world is made. One div at a time.</p>
           <div class="tech-tags">
             <span class="tech-tag">Web Dev</span>
             <span class="tech-tag">Self-Education</span>
-            <span class="tech-tag">Creation</span>
+            <span class="tech-tag">HTML/CSS</span>
           </div>
         </div>
         <div class="project-card">
-          <i class="fas fa-globe icon-large"></i>
-          <h3>Global Classroom</h3>
+          <div class="icon-title-row">
+            <i class="fas fa-globe icon-large"></i>
+            <h3>Global Classroom</h3>
+          </div>
           <p>Traveling across 25+ countries to learn from people, cultures, and chaos. Collecting skills, stories, and human connections.</p>
           <div class="tech-tags">
-            <span class="tech-tag">Travel</span>
+            <span class="tech-tag">Human Skill</span>
             <span class="tech-tag">Learning</span>
             <span class="tech-tag">Connection</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Skills – Clickable Card (Trailer) -->
+    <!-- ========================= SKILLS ========================= -->
+    <div class="container">
       <h2 class="section-title">Skills</h2>
-      <div class="skills-card" id="skills-card">
-        <h3>What I Bring to the Table</h3>
-        <ul>
-          <li><strong>Technical:</strong> PCB Design (Altium, Cadence), MATLAB/Simulink, C/C++, LabVIEW, Soldering</li>
-          <li><strong>Professional:</strong> Community Management, Public Speaking, Mentoring, Technical Training</li>
-          <li><strong>Life Skills:</strong> Tractor driving, milking buffaloes and cows, forklift operation, first aid, festival bartending — and being an awesome human 😄</li>
-        </ul>
+      <div class="personal-card" id="skills-card">
+        <p>I’ve taught power electronics to international students, managed crypto communities of 30k+, and created UGC that converts. Oh—and I can write you a fat-loss plan that actually works. My superpower? Making complex things feel human.</p>
       </div>
+    </div>
 
-      <!-- Skills Modal (Vertical List) -->
-      <div id="skills-modal" class="modal">
-        <div class="modal-content">
-          <span class="close-button" id="close-skills">&times;</span>
-          <h3>What I Bring to the Table</h3>
-          <div class="skills-list-container">
-            <div class="skill-item technical">
-              <div class="skill-header"><i class="fas fa-tools"></i> <span>Technical</span></div>
-              <ul>
-                <li>Master’s in Electrical Energy & Mobility Systems; bachelor’s in Systems Engineering – both with distinction.</li>
-                <li>Built odd-ball test rigs, sniffed out cold-solder joints, chased EMC ghosts, and made customer setups work.</li>
-                <li>Measured MOSFET switching losses, sized heatsinks, and turned datasheet curves into 24 V truck-lighting headroom.</li>
-                <li>Tools: Altium & Cadence (PCB), MATLAB/Simulink (controls), scope & probes (truth), just enough C/Python to script the boring stuff.</li>
-                <li>Now learning AI/ML basics, HTML/CSS/JS and automation so my next board ships with its own tiny web UI.</li>
-              </ul>
-            </div>
-            <div class="skill-item professional">
-              <div class="skill-header"><i class="fas fa-users"></i> <span>People & Communication</span></div>
-              <ul>
-                <li>Tutored and lectured in my own Master’s programme—turned power-electronics theory into workshops students actually enjoyed.</li>
-                <li>Assistant to the Programme Director: bridged faculty, industry and 150+ international students.</li>
-                <li>Pitched automotive ICs to CTOs at trade fairs, then explained gate drivers to teenagers—same smile, different story.</li>
-                <li>Created demos, white-papers and sales-training videos for new high-side switches.</li>
-                <li>Community Manager for crypto start-up Renegade: kept 30k Telegram members sane and translated “tokenomics” into human.</li>
-                <li>Comfortable on stage or one-to-one—live talks, podcasts, pitch contests.</li>
-              </ul>
-            </div>
-            <div class="skill-item life">
-              <div class="skill-header"><i class="fas fa-tractor"></i> <span>Life Skills</span></div>
-              <ul>
-                <li>Licensed for tractors, forklifts, loaders, motorbikes, 4-WD trucks.</li>
-                <li>Rebuilt fences, irrigation lines and milking parlours on a buffalo dairy farm in Western Australia.</li>
-                <li>Hands-on with cows & buffaloes, pasture management, emergency mechanical fixes 200 km from the next town.</li>
-                <li>Remote-area first-aid certified; calm when the nearest ambulance is a Royal-Flying-Doctor flight away.</li>
-                <li>5 a.m. milking shift—best cure for procrastination.</li>
-              </ul>
-            </div>
-            <div class="skill-item global">
-              <div class="skill-header"><i class="fas fa-globe-americas"></i> <span>Global Mindset</span></div>
-              <ul>
-                <li>Lived/worked in 25+ countries; negotiated in German, explained grounding in Arabic, shared a tractor cabin with Kiwi, Peruvian and Japanese backpackers.</li>
-                <li>Picked up local etiquette that makes international customers feel “he gets us”—short-circuits months of trust-building.</li>
-                <li>Airport lounges feel like home: short-notice business trips, field-support missions, passport-boots-oscilloscope always packed.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hobbies & Interests – Clickable Card -->
+    <!-- ========================= HOBBIES & INTERESTS ========================= -->
+    <div class="container">
       <h2 class="section-title">Hobbies & Interests</h2>
       <div class="personal-card" id="hobbies-card">
-        <h3>Curious About My Interests?</h3>
+        <p>I geek out on behavioral psychology, price action patterns, and human performance—whether it’s optimizing a trading setup or a 12-week fitness plan. Always learning, never bored.</p>
       </div>
+    </div>
 
-      <!-- Hobbies Modal (Vertical List) -->
-      <div id="hobbies-modal" class="modal">
-        <div class="modal-content">
-          <span class="close-button" id="close-hobbies">&times;</span>
-          <h3>My Hobbies & Interests</h3>
-          <div class="hobby-list-container">
-            <div class="hobby-item">
-              <div class="hobby-header"><i class="fas fa-book-open"></i> <span>Books</span></div>
-              <p>Mainly self-education, human behavior and how to get better</p>
-            </div>
-            <div class="hobby-item">
-              <div class="hobby-header"><i class="fas fa-chart-line"></i> <span>Trading</span></div>
-              <p>Technical Analysis of Crypto, Stocks, Forex. Went from 40k to 0.</p>
-            </div>
-            <div class="hobby-item">
-              <div class="hobby-header"><i class="fas fa-laptop-code"></i> <span>Learning</span></div>
-              <p>Try to understand how the digital world is made. Improving how can I become an advanced human.</p>
-            </div>
-            <div class="hobby-item">
-              <div class="hobby-header"><i class="fas fa-globe-americas"></i> <span>Traveling</span></div>
-              <p>25+ countries, every place teaches me something new — from chaos to calm, from markets to mountains.</p>
-            </div>
-            <div class="hobby-item">
-              <div class="hobby-header"><i class="fas fa-dumbbell"></i> <span>Sport</span></div>
-              <p>Gym, hiking, biking. Also love training, nutrition, and pushing limits.</p>
-            </div>
-            <div class="hobby-item">
-              <div class="hobby-header"><i class="fas fa-gamepad"></i> <span>Enjoyment</span></div>
-              <p>Gaming, partying (alcohol-free, but still fun!), music, and celebrating life.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Thoughts – Linked to Individual Pages -->
+    <!-- ========================= THOUGHTS (6 DISTINCT TOPICS) ========================= -->
+    <div class="container">
       <h2 class="section-title">Thoughts</h2>
-      <div class="personal-card-grid">
-        <a href="who-am-i.html" class="personal-card thought-link">
-          <h3>Who am I?</h3>
+      <div class="projects-grid">
+        <a href="articles/who-am-i.html" class="personal-card thought-link">
+          <h3>Who Am I?</h3>
           <p>A curious soul, ex-engineer, current nomad, and eternal student of life.</p>
         </a>
-        <a href="why-i-quit.html" class="personal-card thought-link">
+        <a href="articles/why-i-quit.html" class="personal-card thought-link">
           <h3>Why I Quit Everything in 2023</h3>
           <p>I sold my car, bike, and joked about selling my girlfriend — to start a real-life Hobbit journey.</p>
         </a>
-        <a href="trading-40k-to-0.html" class="personal-card thought-link">
-          <h3>Trading: From €40k to 0!</h3>
-          <p>Still paying off tuition to Mr. Market 😅 — down €40k, but up in wisdom.</p>
+        <a href="articles/trading-40k-to-0.html" class="personal-card thought-link">
+          <h3>Trading: From €40k Loss to Hard-Won Wisdom</h3>
+          <p>Still paying tuition to Mr. Market 😅 — but now I trade with discipline, not hope.</p>
         </a>
-        <a href="how-traveling-changed-me.html" class="personal-card thought-link">
-          <h3>How Traveling Changed My Life</h3>
-          <p>From Nepal to Australia — meeting strangers who became friends.</p>
+        <a href="articles/from-engineer-to-what.html" class="personal-card thought-link">
+          <h3>From Electronics Engineer to… What Exactly?</h3>
+          <p>Tutor, crypto support lead, startup advisor, UGC creator, and accidental farmer. My career doesn’t fit on a business card—and I love it.</p>
         </a>
-        <a href="my-journey-so-far.html" class="personal-card thought-link">
-          <h3>My Journey So Far</h3>
-          <p>25+ countries, 3 continents, countless lessons.</p>
+        <a href="articles/fitness-mindset.html" class="personal-card thought-link">
+          <h3>Fitness Isn’t Just Lifting — It’s Mindset</h3>
+          <p>How discipline in the gym shaped my approach to trading, travel, and building from zero.</p>
+        </a>
+        <a href="articles/time-abundance.html" class="personal-card thought-link">
+          <h3>Time Abundance > Money Abundance</h3>
+          <p>I traded a salary for sunrises, deep convos, and the freedom to say “not today” to burnout.</p>
         </a>
       </div>
+    </div>
 
-      <!-- Contact -->
+    <!-- ========================= CONTACT & FOOTER ========================= -->
+    <div class="container">
       <h2 class="section-title">Wanna get in touch?</h2>
       <p>I’m always available for exciting discussions.</p>
       <div class="contact-info">
         <p><i class="fas fa-envelope"></i> <a href="mailto:semi.mamou@gmail.com">semi.mamou@gmail.com</a></p>
         <p><i class="fas fa-map-marker-alt"></i> Currently in Australia 🇦🇺</p>
       </div>
-
-      <!-- Footer Social Icons -->
       <div class="footer-social-links">
         <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
@@ -277,9 +220,92 @@
       Made with HTML5, coffee, and a bit of AI 🌤️
     </footer>
 
-    <!-- Particles.js -->
+    <!-- ========================= MODALS ========================= -->
+    <div id="skills-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close-skills">&times;</span>
+        <h3>What I Bring to the Table</h3>
+        <div class="skills-list-container">
+          <div class="skill-item technical">
+            <div class="skill-header"><i class="fas fa-tools"></i> <span>Technical</span></div>
+            <ul>
+              <li>Master’s in Electrical Energy & Mobility Systems; bachelor’s in Systems Engineering – both with distinction.</li>
+              <li>Built odd-ball test rigs, sniffed out cold-solder joints, chased EMC ghosts, and made customer setups work.</li>
+              <li>Measured MOSFET switching losses, sized heatsinks, and turned datasheet curves into 24 V truck-lighting headroom.</li>
+              <li>Tools: Altium & Cadence (PCB), MATLAB/Simulink (controls), scope & probes (truth), just enough C/Python to script the boring stuff.</li>
+              <li>Now learning AI/ML basics, HTML/CSS/JS and automation so my next board ships with its own tiny web UI.</li>
+            </ul>
+          </div>
+          <div class="skill-item professional">
+            <div class="skill-header"><i class="fas fa-users"></i> <span>People & Communication</span></div>
+            <ul>
+              <li>Tutored and lectured in my own Master’s programme—turned power-electronics theory into workshops students actually enjoyed.</li>
+              <li>Assistant to the Programme Director: bridged faculty, industry and 150+ international students.</li>
+              <li>Pitched automotive ICs to CTOs at trade fairs, then explained gate drivers to teenagers—same smile, different story.</li>
+              <li>Created demos, white-papers and sales-training videos for new high-side switches.</li>
+              <li>Community Manager for crypto start-up Renegade: kept 30k Telegram members sane and translated “tokenomics” into human.</li>
+              <li>Comfortable on stage or one-to-one—live talks, podcasts, pitch contests.</li>
+            </ul>
+          </div>
+          <div class="skill-item life">
+            <div class="skill-header"><i class="fas fa-tractor"></i> <span>Life Skills</span></div>
+            <ul>
+              <li>Licensed for tractors, forklifts, loaders, motorbikes, 4-WD trucks.</li>
+              <li>Rebuilt fences, irrigation lines and milking parlours on a buffalo dairy farm in Western Australia.</li>
+              <li>Hands-on with cows & buffaloes, pasture management, emergency mechanical fixes 200 km from the next town.</li>
+              <li>Remote-area first-aid certified; calm when the nearest ambulance is a Royal-Flying-Doctor flight away.</li>
+              <li>5 a.m. milking shift—best cure for procrastination.</li>
+            </ul>
+          </div>
+          <div class="skill-item global">
+            <div class="skill-header"><i class="fas fa-globe-americas"></i> <span>Global Mindset</span></div>
+            <ul>
+              <li>Lived/worked in 25+ countries; negotiated in German, explained grounding in Arabic, shared a tractor cabin with Kiwi, Peruvian and Japanese backpackers.</li>
+              <li>Picked up local etiquette that makes international customers feel “he gets us”—short-circuits months of trust-building.</li>
+              <li>Airport lounges feel like home: short-notice business trips, field-support missions, passport-boots-oscilloscope always packed.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hobbies-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close-hobbies">&times;</span>
+        <h3>My Hobbies & Interests</h3>
+        <div class="hobby-list-container">
+          <div class="hobby-item">
+            <div class="hobby-header"><i class="fas fa-book-open"></i> <span>Books</span></div>
+            <p>Mainly self-education, human behavior and how to get better</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-header"><i class="fas fa-chart-line"></i> <span>Trading</span></div>
+            <p>Technical Analysis of Crypto, Stocks, Forex. Went from 40k to 0.</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-header"><i class="fas fa-laptop-code"></i> <span>Learning</span></div>
+            <p>Try to understand how the digital world is made. Improving how can I become an advanced human.</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-header"><i class="fas fa-globe-americas"></i> <span>Traveling</span></div>
+            <p>25+ countries, every place teaches me something new — from chaos to calm, from markets to mountains.</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-header"><i class="fas fa-dumbbell"></i> <span>Fitness</span></div>
+            <p>Strength training, nutrition planning, and helping others transform their bodies (and minds).</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-header"><i class="fas fa-video"></i> <span>Content Creation</span></div>
+            <p>Creating authentic UGC for digital products—because real > perfect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================= SCRIPTS ========================= -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script>
+      // Particles
       tsParticles.load("particles", {
         fpsLimit: 60,
         particles: {
@@ -292,11 +318,8 @@
         interactivity: { detectsOn: "canvas", events: { onHover: { enable: false } } },
         detectRetina: true
       });
-    </script>
 
-    <!-- Main Scripts -->
-    <script>
-      // Theme Toggle (Bottom-Left)
+      // Theme Toggle
       const themeToggle = document.getElementById('themeToggle');
       const body = document.body;
       const savedTheme = localStorage.getItem('theme');
@@ -319,53 +342,30 @@
         }
       });
 
-      // Parallax
+      // Parallax & Back to Top
       const hero = document.getElementById('hero');
-      window.addEventListener('scroll', () => {
-        hero.style.backgroundPositionY = -(window.pageYOffset * 0.3) + 'px';
-      });
-
-      // Back to Top
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
+        hero.style.backgroundPositionY = -(window.pageYOffset * 0.3) + 'px';
         backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
         backToTop.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
       });
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
       // Loader
       document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 300);
       });
 
-      // Hobbies Modal
-      document.getElementById('hobbies-card')?.addEventListener('click', () => {
-        document.getElementById('hobbies-modal').style.display = 'block';
-      });
-      document.getElementById('close-hobbies')?.addEventListener('click', () => {
-        document.getElementById('hobbies-modal').style.display = 'none';
-      });
+      // Modals
+      document.getElementById('hobbies-card')?.addEventListener('click', () => document.getElementById('hobbies-modal').style.display = 'block');
+      document.getElementById('skills-card')?.addEventListener('click', () => document.getElementById('skills-modal').style.display = 'block');
+      document.getElementById('close-hobbies')?.addEventListener('click', () => document.getElementById('hobbies-modal').style.display = 'none');
+      document.getElementById('close-skills')?.addEventListener('click', () => document.getElementById('skills-modal').style.display = 'none');
       window.addEventListener('click', (e) => {
-        const modal = document.getElementById('hobbies-modal');
-        if (e.target === modal) modal.style.display = 'none';
-      });
-
-      // Skills Modal
-      document.getElementById('skills-card')?.addEventListener('click', () => {
-        document.getElementById('skills-modal').style.display = 'block';
-      });
-      document.getElementById('close-skills')?.addEventListener('click', () => {
-        document.getElementById('skills-modal').style.display = 'none';
-      });
-      window.addEventListener('click', (e) => {
-        const modal = document.getElementById('skills-modal');
-        if (e.target === modal) modal.style.display = 'none';
+        if (e.target.id === 'hobbies-modal') document.getElementById('hobbies-modal').style.display = 'none';
+        if (e.target.id === 'skills-modal') document.getElementById('skills-modal').style.display = 'none';
       });
     </script>
   </body>
 </html>
-
-
-
