@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Electronics Engineer to… What Exactly? — Semi Mamou</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon.png?v=1">
+  <style>
+    .blog-image { width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    @media (max-width: 768px) { .blog-image { margin: 1.2rem 0; } }
+  </style>
+</head>
+<body>
+  <div id="loader"><div class="spinner"></div></div>
+  <div id="particles"></div>
+  <div class="theme-toggle-bottom-left">
+    <button id="themeToggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+  </div>
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="container">
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+
+    <main>
+      <h1>From Electronics Engineer to… What Exactly?</h1>
+      <p><em>Tutor, crypto support lead, startup advisor, UGC creator, and accidental farmer. My career doesn’t fit on a business card—and I love it.</em></p>
+
+      <p>
+        People assume engineers are rigid. That we only speak in schematics and datasheets. But my superpower has always been this: <strong>I can connect with anything—and anyone.</strong>
+      </p>
+
+      <p>
+        At Infineon, I wasn’t just a lab guy. I was the one they took to customer meetings—unusual for verification engineers. Why? Because when I explained a MOSFET’s switching behavior, I didn’t drown them in equations. I told a story. And stories stick.
+      </p>
+
+      <p>
+        HR noticed. They invited me to university hiring events, freshman orientations, tech fairs. “Semi makes people feel seen,” they’d say. Colleagues wanted to work with me—not just because I delivered flawless test rigs, but because I brought warmth to the room.
+      </p>
+
+      <p>
+        That same ease translates everywhere:  
+        → Teaching power electronics to stressed Master’s students  
+        → Calming a panicked user at 3 a.m. whose crypto wallet won’t sync  
+        → Advising a founder on how to explain their AI tool in plain English  
+        → Milking buffaloes at 5 a.m. in rural Australia (yes, really)
+      </p>
+
+      <p>
+        Chips, humans, cows—it’s all about listening, adapting, and finding the signal in the noise. No challenge has ever felt too big. Just another puzzle to solve with curiosity and care.
+      </p>
+
+      <p>
+        Sometimes I miss Infineon. But I don’t regret leaving. Because this path—messy, multifaceted, and mine—lets me be fully human. And that’s worth more than any title.
+      </p>
+    </main>
+
+    <div class="footer-social-links" style="margin: 2rem 0; justify-content: center;">
+      <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@semilarious"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/"><i class="fab fa-facebook"></i></a>
+      <a href="https://at.linkedin.com/in/semi-mamou-037954ba"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+  </div>
+
+  <footer>Made with HTML5, coffee, and a bit of AI 🌤️</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles", { fpsLimit: 60, particles: { number: { value: 80, density: { enable: true, area: 800 } }, color: { value: "#990000" }, opacity: { value: { min: 0.3, max: 0.8 }, random: true }, size: { value: { min: 1, max: 8 } }, move: { enable: true, speed: 0.7, direction: "none", random: true } }, interactivity: { detectsOn: "canvas", events: { onHover: { enable: false } } }, detectRetina: true });
+  </script>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      themeToggle.classList.add('dark-mode');
+    }
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggle.classList.add('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
+      backToTop.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 300);
+    });
+  </script>
+</body>
+</html>

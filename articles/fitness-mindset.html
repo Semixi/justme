@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Isn’t Just Lifting — It’s Mindset — Semi Mamou</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon.png?v=1">
+  
+  <style>
+    .blog-image { width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    @media (max-width: 768px) { .blog-image { margin: 1.2rem 0; } }
+  </style>
+</head>
+<body>
+  <div id="loader"><div class="spinner"></div></div>
+  <div id="particles"></div>
+  <div class="theme-toggle-bottom-left">
+    <button id="themeToggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+  </div>
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="container">
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+
+    <main>
+      <h1>Fitness Isn’t Just Lifting — It’s Mindset</h1>
+      <p><em>How discipline in the gym shaped my approach to trading, travel, and building from zero.</em></p>
+
+      <p>
+        I’ve been serious about fitness for over a decade—not for aesthetics, but for <strong>mental resilience</strong>. The gym is where I learned that growth happens just beyond your comfort zone.
+      </p>
+
+      <p>
+        When I lost €40k trading, I didn’t stop training. In fact, I leaned in harder. Because lifting taught me two truths:  
+        1. <strong>Discipline compounds.</strong> One extra rep today = 100 extra reps this month.  
+        2. <strong>Resilience is built, not born.</strong> You don’t know your limits until you push past them.
+      </p>
+
+      <p>
+        This mindset spills into everything:  
+        → In trading: I stick to my risk rules like I stick to my workout plan.  
+        → In travel: I embrace discomfort like I embrace heavy sets.  
+        → In life: I trust the process, even when results aren’t immediate.
+      </p>
+
+      <h2>And yes—I help others too</h2>
+      <p>
+        If you want to lose fat, build strength, or just feel more capable in your body: <strong>DM me</strong>. Tell me your goal, your struggles, your sweet tooth cravings—we’ll build a plan that works for <em>your</em> life.
+      </p>
+
+      <p>
+        Diets aren’t about restriction. They’re about strategy. And with the right approach, you’ll be shocked how easy it can feel. No magic pills. Just science, consistency, and a little “one more rep” energy.
+      </p>
+
+      <p style="font-style: italic; margin-top: 1rem;">
+        Remember: The version of you that shows up when you’re tired is the version that wins. Keep going.
+      </p>
+    </main>
+
+    <div class="footer-social-links" style="margin: 2rem 0; justify-content: center;">
+      <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@semilarious"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/"><i class="fab fa-facebook"></i></a>
+      <a href="https://at.linkedin.com/in/semi-mamou-037954ba"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+  </div>
+
+  <footer>Made with HTML5, coffee, and a bit of AI 🌤️</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles", { fpsLimit: 60, particles: { number: { value: 80, density: { enable: true, area: 800 } }, color: { value: "#990000" }, opacity: { value: { min: 0.3, max: 0.8 }, random: true }, size: { value: { min: 1, max: 8 } }, move: { enable: true, speed: 0.7, direction: "none", random: true } }, interactivity: { detectsOn: "canvas", events: { onHover: { enable: false } } }, detectRetina: true });
+  </script>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      themeToggle.classList.add('dark-mode');
+    }
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggle.classList.add('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
+      backToTop.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 300);
+    });
+  </script>
+</body>
+</html>

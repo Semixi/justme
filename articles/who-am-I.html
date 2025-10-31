@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who Am I? — Semi Mamou</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon.png?v=1">
+  <style>
+    .blog-image { width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    @media (max-width: 768px) { .blog-image { margin: 1.2rem 0; } }
+  </style>
+</head>
+<body>
+  <div id="loader"><div class="spinner"></div></div>
+  <div id="particles"></div>
+  <div class="theme-toggle-bottom-left">
+    <button id="themeToggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+  </div>
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="container">
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+
+    <main>
+      <h1>Who Am I?</h1>
+      <p><em>A manifesto, not a resume.</em></p>
+
+      <p>
+        I am not my job title. I am not my bank account. I am not even my passport (though it’s half-Austrian, half-Tunisian, and well-stamped).
+      </p>
+
+      <p>
+        I am a <strong>curious soul</strong> who believes the best education happens outside classrooms—in chaotic markets, silent mountains, and late-night convos with strangers.
+      </p>
+
+      <p>
+        I am an <strong>electronics engineer</strong> who learned that circuits are simple compared to human hearts—but both deserve patience, precision, and respect.
+      </p>
+
+      <p>
+        I am a <strong>current nomad</strong> not because I hate stability, but because I love the question: “What if?”
+      </p>
+
+      <p>
+        I am an <strong>eternal student of life</strong>—studying trading charts, human behavior, buffalo behavior, and how to make a perfect cup of coffee with a camp stove.
+      </p>
+
+      <p>
+        I value <strong>time over money</strong>, <strong>connection over status</strong>, and <strong>stories over stuff</strong>.
+      </p>
+
+      <p>
+        I’ve paid off a €40k trading loss, milked buffaloes at dawn, debugged blockchain errors at 3 a.m., and still believe the world is full of good people doing their best.
+      </p>
+
+      <p>
+        If you’re here, you probably feel it too: that life isn’t about climbing a ladder, but weaving a web of meaning, one honest choice at a time.
+      </p>
+
+      <p style="margin-top: 1.5rem; font-style: italic;">
+        Let’s build something real together.
+      </p>
+    </main>
+
+    <div class="footer-social-links" style="margin: 2rem 0; justify-content: center;">
+      <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@semilarious"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/"><i class="fab fa-facebook"></i></a>
+      <a href="https://at.linkedin.com/in/semi-mamou-037954ba"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+  </div>
+
+  <footer>Made with HTML5, coffee, and a bit of AI 🌤️</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles", { fpsLimit: 60, particles: { number: { value: 80, density: { enable: true, area: 800 } }, color: { value: "#990000" }, opacity: { value: { min: 0.3, max: 0.8 }, random: true }, size: { value: { min: 1, max: 8 } }, move: { enable: true, speed: 0.7, direction: "none", random: true } }, interactivity: { detectsOn: "canvas", events: { onHover: { enable: false } } }, detectRetina: true });
+  </script>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      themeToggle.classList.add('dark-mode');
+    }
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggle.classList.add('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
+      backToTop.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 300);
+    });
+  </script>
+</body>
+</html>

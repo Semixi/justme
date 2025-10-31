@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading: From €40k Loss to Hard-Won Wisdom — Semi Mamou</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon.png?v=1">
+  <style>
+    .blog-image { width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    @media (max-width: 768px) { .blog-image { margin: 1.2rem 0; } }
+  </style>
+</head>
+<body>
+  <div id="loader"><div class="spinner"></div></div>
+  <div id="particles"></div>
+  <div class="theme-toggle-bottom-left">
+    <button id="themeToggle" aria-label="Toggle dark/light mode"><i class="fas fa-moon"></i></button>
+  </div>
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="container">
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+
+    <main>
+      <h1>Trading: From €40k Loss to Hard-Won Wisdom</h1>
+      <p><em>Still paying tuition to Mr. Market 😅 — but now I trade with discipline, not hope.</em></p>
+
+      <p>
+        It started in April 2020. The world shut down, markets crashed—and I stepped in with €10k. I worked at Infineon, so I bought Infineon stock. It doubled. Then tripled. I added another €10k. Then another. Then another. Suddenly, I had €40k.
+      </p>
+
+      <p>
+        That’s when ego kicked in. “I know what I’m doing,” I told myself. So I went all-in on high-volatility plays: crypto, meme stocks, x5, x10, even x20 leverage. Who needs ETFs when you can ride a rocket?
+      </p>
+
+      <p>
+        But rockets fall. Hard.
+      </p>
+
+      <p>
+        Stop-losses triggered. Accounts bled. “I’ll just double it back,” I’d say—chasing a 50% loss with 100% risk. I ignored position sizing. I ignored risk-reward. I ignored everything except the dream of getting back to zero.
+      </p>
+
+      <p>
+        The only things that survived? My early crypto buys: ADA, CRO, TRX. No leverage. Just patience. But they were too small to matter. BTC and ETH? Barely touched. The rest? Gone.
+      </p>
+
+      <p>
+        I tried everything: custom Pine Script indicators, stochastic oscillators, “smart money” concepts. I made money sometimes—but lost more. In the end, I was €40k in the red.
+      </p>
+
+      <h2>Then I met Ryhan (Eurotrader)</h2>
+      <p>
+        We crossed paths in a Dubai Airbnb while I was with Renegade. I recognized him instantly—he’d been my silent mentor through YouTube. We talked for hours. He’d even followed my nomad journey online.
+      </p>
+
+      <p>
+        When he opened his mentorship, I joined without hesitation. Not to get rich quick—but to finally learn how to trade like a professional, not a gambler.
+      </p>
+
+      <h2>Today, it’s only up</h2>
+      <p>
+        I journal every trade. I risk 1% per position. I wait for A+ setups. I’ve accepted that trading isn’t about being right—it’s about surviving to play another day.
+      </p>
+
+      <p>
+        If you’re learning to trade: lose small, learn fast, and never stop studying. Your biggest edge isn’t your strategy—it’s your self-awareness.
+      </p>
+
+      <p style="margin-top: 1.5rem; font-style: italic;">
+        P.S. If you want to avoid my mistakes, I’m happy to share my risk framework. Just say hi.
+      </p>
+    </main>
+
+    <div class="footer-social-links" style="margin: 2rem 0; justify-content: center;">
+      <a href="https://www.youtube.com/@Semilarious"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/semilarious/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@semilarious"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/semi.mamou/posts/32476004295320235/"><i class="fab fa-facebook"></i></a>
+      <a href="https://at.linkedin.com/in/semi-mamou-037954ba"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div style="margin: 1.5rem 0;">
+      <a href="../index.html" style="color: var(--main-red); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-arrow-left"></i> Back to me
+      </a>
+    </div>
+  </div>
+
+  <footer>Made with HTML5, coffee, and a bit of AI 🌤️</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles", { fpsLimit: 60, particles: { number: { value: 80, density: { enable: true, area: 800 } }, color: { value: "#990000" }, opacity: { value: { min: 0.3, max: 0.8 }, random: true }, size: { value: { min: 1, max: 8 } }, move: { enable: true, speed: 0.7, direction: "none", random: true } }, interactivity: { detectsOn: "canvas", events: { onHover: { enable: false } } }, detectRetina: true });
+  </script>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      themeToggle.classList.add('dark-mode');
+    }
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeToggle.classList.add('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.opacity = window.scrollY > 400 ? '1' : '0';
+      backToTop.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.getElementById('loader')?.classList.add('hidden'), 300);
+    });
+  </script>
+</body>
+</html>
